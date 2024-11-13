@@ -81,11 +81,24 @@
   margin-bottom: 1rem;
 }
 
-.ctaButton {
+.ctaButtonSelected {
   background-color: #6c5ce7;
   color: #ffffff;
   padding: 0.5rem 1rem;
-  border: none;
+  border: 1px solid white;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.ctaButton {
+  background-color: white;
+  color: #6c5ce7;
+  padding: 0.5rem 1rem;
+  border: 1px solid #6c5ce7;
   border-radius: 4px;
   font-size: 0.875rem;
   cursor: pointer;

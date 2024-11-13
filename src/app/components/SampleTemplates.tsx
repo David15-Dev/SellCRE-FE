@@ -41,17 +41,15 @@ export default function SampleTemplates() {
                 alt={template.title}
                 className={styles.image}
               />
-              <div className={styles.overlay}>
-                <h3 className={styles.overlayTitle}>{template.overlayTitle}</h3>
-                <p className={styles.overlaySubtitle}>
-                  {template.overlaySubtitle}
-                </p>
-              </div>
             </div>
             <div className={styles.cardContent}>
               <h3 className={styles.cardTitle}>{template.title}</h3>
               <p className={styles.description}>{template.description}</p>
-              <button className={styles.ctaButton}>
+              <button
+                className={
+                  index === 0 ? styles.ctaButtonSelected : styles.ctaButton
+                }
+              >
                 {template.buttonText}
               </button>
             </div>
