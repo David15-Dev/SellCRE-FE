@@ -1,0 +1,140 @@
+/* src/app/components/BannerSection.module.css */
+
+.bannerSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  /* background-color: #f8f9fa; */
+  background-image: url("/bbg1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  z-index: 1; /* Ensures content is above any background image */
+  max-width: 640px;
+  padding: 0px 60px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.tryButton,
+.demoButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tryButton {
+  background-color: #6c5ce7;
+  color: #fff;
+  border: none;
+}
+
+.tryButton:hover {
+  background-color: #5947c1;
+}
+
+.demoButton {
+  background-color: transparent;
+  color: #6c5ce7;
+  border: none;
+}
+
+.demoButton:hover {
+  background-color: #6c5ce7;
+  color: #fff;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 0.5rem;
+}
+.imagePane {
+  padding: 0px 60px;
+}
+@media (max-width: 1260px) {
+  .imagePane,
+  .content {
+    padding: 0px 20px;
+  }
+}
+@media (max-width: 1030px) {
+  .bannerImage {
+    width: 400px;
+  }
+}
+@media (max-width: 920px) {
+  .imagePane,
+  .content {
+    padding: 0;
+  }
+  .bannerImage {
+    width: 360px;
+  }
+}
+@media (max-width: 840px) {
+  .bannerSection {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  .bannerImage {
+    width: 80vw;
+  }
+  .imagePane {
+    margin-top: 50px;
+    padding: 0px 20px;
+    width: 100%;
+  }
+  .content {
+    width: 100%;
+    padding: 0px 20px;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .tryButton,
+  .demoButton {
+    width: 100%; /* Full width buttons for mobile */
+  }
+}

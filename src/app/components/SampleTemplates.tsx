@@ -31,30 +31,32 @@ export default function SampleTemplates() {
 
   return (
     <section className={styles.sampleTemplates}>
-      <h2 className={styles.title}>Sample OMs created with our platform</h2>
-      <div className={styles.templatesGrid}>
-        {templates.map((template, index) => (
-          <div key={index} className={styles.templateCard}>
-            <div className={styles.imageWrapper}>
-              <img
-                src={template.image}
-                alt={template.title}
-                className={styles.image}
-              />
+      <div className={styles.container}>
+        <h2 className={styles.title}>Sample OMs created with our platform</h2>
+        <div className={styles.templatesGrid}>
+          {templates.map((template, index) => (
+            <div key={index} className={styles.templateCard}>
+              <div className={styles.imageWrapper}>
+                <img
+                  src={template.image}
+                  alt={template.title}
+                  className={styles.image}
+                />
+              </div>
+              <div className={styles.cardContent}>
+                <h3 className={styles.cardTitle}>{template.title}</h3>
+                <p className={styles.description}>{template.description}</p>
+                <button
+                  className={
+                    index === 0 ? styles.ctaButtonSelected : styles.ctaButton
+                  }
+                >
+                  {template.buttonText}
+                </button>
+              </div>
             </div>
-            <div className={styles.cardContent}>
-              <h3 className={styles.cardTitle}>{template.title}</h3>
-              <p className={styles.description}>{template.description}</p>
-              <button
-                className={
-                  index === 0 ? styles.ctaButtonSelected : styles.ctaButton
-                }
-              >
-                {template.buttonText}
-              </button>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
