@@ -14,9 +14,10 @@
 /* Default grid for larger screens: 3 columns */
 .typesGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Default to 3 columns */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1.5rem;
-  justify-content: center;
+  max-width: 600px; /* Set a maximum width for grid alignment */
+  margin: 0 auto; /* Center the grid within the container */
 }
 
 /* Medium and small screens: 2 columns */
