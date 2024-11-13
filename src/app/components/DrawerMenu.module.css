@@ -3,29 +3,29 @@
 .menuButton {
   background: none;
   border: none;
-  font-size: 2rem;
+  font-size: 1.3rem;
   cursor: pointer;
   position: fixed;
   top: 1rem;
-  left: 1rem;
+  right: 1rem; /* Position the button on the right side */
   z-index: 10;
 }
 
 .drawer {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0; /* Slide in from the right */
   height: 100%;
   width: 250px;
   background-color: #fff;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
-  transform: translateX(-100%);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+  transform: translateX(100%); /* Initially hidden off-screen */
   transition: transform 0.3s ease;
   z-index: 100;
 }
 
 .open {
-  transform: translateX(0);
+  transform: translateX(0); /* Slide in */
 }
 
 .drawerContent {
@@ -33,14 +33,17 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  justify-content: space-between;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 2rem;
+}
+
+.logoImage {
+  height: 40px; /* Adjust height to fit nicely */
 }
 
 .link {
@@ -48,7 +51,10 @@
   margin: 1rem 0;
   color: #333;
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
 }
 
 .ctaButton {
@@ -59,6 +65,8 @@
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .overlay {
@@ -69,11 +77,12 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.3s ease;
   z-index: 90;
 }
 
-.showOverlay {
+.open ~ .overlay {
   opacity: 1;
-  pointer-events: auto;
+  pointer-events: auto; /* Enable clicking to close */
 }

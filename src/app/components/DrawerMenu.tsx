@@ -13,12 +13,22 @@ export default function DrawerMenu() {
 
   return (
     <>
+      {/* Menu button to open and close the drawer */}
       <button className={styles.menuButton} onClick={toggleDrawer}>
-        ☰
+        ☰ {/* Menu icon */}
       </button>
+
+      {/* Drawer content and overlay */}
       <div className={`${styles.drawer} ${isOpen ? styles.open : ""}`}>
         <div className={styles.drawerContent}>
-          <div className={styles.logo}>SellCRE.ai</div>
+          {/* Use SVG logo here */}
+          <div className={styles.logo}>
+            <img
+              src="./logo.svg"
+              alt="SellCRE.ai Logo"
+              className={styles.logoImage}
+            />
+          </div>
           <nav>
             <a href="#features" className={styles.link}>
               Features
@@ -36,10 +46,9 @@ export default function DrawerMenu() {
           <button className={styles.ctaButton}>Try For Free</button>
         </div>
       </div>
-      <div
-        className={`${styles.overlay} ${isOpen ? styles.showOverlay : ""}`}
-        onClick={toggleDrawer}
-      ></div>
+
+      {/* Overlay to close the drawer when clicked */}
+      {isOpen && <div className={styles.overlay} onClick={toggleDrawer}></div>}
     </>
   );
 }

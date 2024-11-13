@@ -14,15 +14,24 @@
   color: #333;
 }
 
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
 .nav {
   display: flex;
   align-items: center;
 }
 
 .link {
-  margin-right: 1rem;
   text-decoration: none;
-  color: #333;
+  color: #18181b;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 23px;
+  margin-right: 40px;
 }
 
 .cta {
@@ -41,11 +50,22 @@
 /* Responsive styling for the drawer */
 @media (max-width: 768px) {
   .nav,
-  .cta {
+  .ctaButton {
     display: none;
   }
 
   .mobileMenu {
     display: block;
   }
+}
+
+.ctaButton {
+  padding: 8px 20px;
+  background-color: #7261ff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
 }
