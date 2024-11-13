@@ -2,11 +2,11 @@
 
 .sampleTemplates {
   text-align: center;
-  padding: 2rem;
   /* background-color: #f8f9fa; */
   background-image: url("/bbg2.png");
   background-size: cover;
   background-position: center;
+  padding: 45px 0px;
 }
 
 .title {
@@ -28,7 +28,6 @@
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   /* Remove transform to prevent moving effect */
-  transition: box-shadow 0.3s ease; /* Only shadow transition */
 }
 
 /* Remove this hover effect if you don't want any movement */
@@ -95,10 +94,21 @@
 }
 
 .container {
-  width: 90%;
-  margin: auto;
+  margin: 0px 40px;
   background-color: white;
   border: none;
   border-radius: 10px;
   padding: 50px 24px;
+}
+
+@media (max-width: 840px) {
+  .container {
+    margin: 0px 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    margin: 0px 20px;
+  }
 }
