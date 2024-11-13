@@ -34,3 +34,13 @@
     grid-template-columns: 1fr;
   }
 }
+
+.typeCard {
+  color: #323232;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 33px 67px;
+  border: none;
+  border-radius: 10px;
+  background-color: #9e9e9e1f;
+}

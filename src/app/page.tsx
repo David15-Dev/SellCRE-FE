@@ -2,7 +2,6 @@
 import Header from "./components/Header";
 import PropertyTypes from "./components/PropertyTypes";
 import SampleTemplates from "./components/SampleTemplates";
-import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -12,7 +11,6 @@ export default function Home() {
         <PropertyTypes />
         <SampleTemplates />
       </main>
-      <Footer />
     </>
   );
 }
