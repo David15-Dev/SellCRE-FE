@@ -23,7 +23,7 @@ export default function PropertyTypes() {
               alt={`${type.name} icon`}
               className={styles.icon}
             />
-            <p className={styles.label}>{type.name}</p>
+            <div className={styles.label}>{type.name}</div>
           </div>
         ))}
       </div>

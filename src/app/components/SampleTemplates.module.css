@@ -24,11 +24,14 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  /* Remove transform to prevent moving effect */
+  transition: box-shadow 0.3s ease; /* Only shadow transition */
 }
 
+/* Remove this hover effect if you don't want any movement */
 .templateCard:hover {
-  transform: translateY(-5px);
+  /* transform: translateY(-5px); */ /* Comment out or remove this line */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust shadow if needed */
 }
 
 .imageWrapper {
@@ -81,24 +84,11 @@
   margin-bottom: 1rem;
 }
 
-.ctaButtonSelected {
+.ctaButton {
   background-color: #6c5ce7;
   color: #ffffff;
   padding: 0.5rem 1rem;
-  border: 1px solid white;
-  border-radius: 4px;
-  font-size: 0.875rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 100%;
-  text-align: center;
-}
-
-.ctaButton {
-  background-color: white;
-  color: #6c5ce7;
-  padding: 0.5rem 1rem;
-  border: 1px solid #6c5ce7;
+  border: none;
   border-radius: 4px;
   font-size: 0.875rem;
   cursor: pointer;
