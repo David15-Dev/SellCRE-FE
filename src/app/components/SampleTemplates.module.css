@@ -1,0 +1,32 @@
+/* src/app/components/SampleTemplates.module.css */
+.sampleTemplates {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.templatesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.template {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .templatesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .templatesGrid {
+    grid-template-columns: 1fr;
+  }
+}

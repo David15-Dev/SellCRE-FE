@@ -1,0 +1,51 @@
+/* src/app/components/Header.module.css */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.cta {
+  background-color: #6c5ce7;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.mobileMenu {
+  display: none; /* Hidden by default */
+}
+
+/* Responsive styling for the drawer */
+@media (max-width: 768px) {
+  .nav,
+  .cta {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: block;
+  }
+}

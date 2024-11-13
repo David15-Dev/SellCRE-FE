@@ -1,0 +1,36 @@
+/* src/app/components/PropertyTypes.module.css */
+.propertyTypes {
+  text-align: center;
+  padding: 2rem;
+}
+
+.propertyTypes h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.typesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.type {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .typesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .typesGrid {
+    grid-template-columns: 1fr;
+  }
+}
